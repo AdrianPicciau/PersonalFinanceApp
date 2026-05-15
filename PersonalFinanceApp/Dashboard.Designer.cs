@@ -36,6 +36,7 @@
             Expenses = new DataGridViewTextBoxColumn();
             label3 = new Label();
             remainingMoneyBox = new TextBox();
+            formsPlot1 = new ScottPlot.WinForms.FormsPlot();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             // incomeBox
             // 
+            incomeBox.AcceptsTab = true;
             incomeBox.Location = new Point(295, 49);
             incomeBox.Name = "incomeBox";
             incomeBox.Size = new Size(150, 27);
@@ -66,7 +68,6 @@
             label2.Size = new Size(275, 38);
             label2.TabIndex = 2;
             label2.Text = "Expenses per Month:";
-            label2.Click += label2_Click;
             // 
             // dataGridView1
             // 
@@ -112,14 +113,22 @@
             remainingMoneyBox.ReadOnly = true;
             remainingMoneyBox.Size = new Size(201, 27);
             remainingMoneyBox.TabIndex = 5;
-            remainingMoneyBox.TextChanged += remainingMoneyBox_TextChanged;
+            // 
+            // formsPlot1
+            // 
+            formsPlot1.Location = new Point(451, 181);
+            formsPlot1.Name = "formsPlot1";
+            formsPlot1.Size = new Size(423, 327);
+            formsPlot1.TabIndex = 6;
+            formsPlot1.Load += formsPlot1_Load;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(896, 537);
+            ClientSize = new Size(919, 550);
+            Controls.Add(formsPlot1);
             Controls.Add(remainingMoneyBox);
             Controls.Add(label3);
             Controls.Add(dataGridView1);
@@ -145,5 +154,6 @@
         private DataGridViewTextBoxColumn Expenses;
         private Label label3;
         private TextBox remainingMoneyBox;
+        private ScottPlot.WinForms.FormsPlot formsPlot1;
     }
 }

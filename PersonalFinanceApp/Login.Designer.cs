@@ -34,6 +34,8 @@
             UserNameBox = new TextBox();
             PasswordBox = new TextBox();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -42,10 +44,9 @@
             label1.Font = new Font("Arial Rounded MT Bold", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(123, 90);
             label1.Name = "label1";
-            label1.Size = new Size(493, 51);
+            label1.Size = new Size(597, 51);
             label1.TabIndex = 0;
-            label1.Text = "Personal Finance App";
-            label1.Click += label1_Click;
+            label1.Text = "$$Personal Finance App$$";
             // 
             // label2
             // 
@@ -66,7 +67,6 @@
             label3.Size = new Size(97, 28);
             label3.TabIndex = 2;
             label3.Text = "Password:";
-            label3.Click += label3_Click;
             // 
             // UserNameBox
             // 
@@ -95,12 +95,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(464, 195);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(285, 183);
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(842, 453);
+            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(PasswordBox);
             Controls.Add(UserNameBox);
@@ -110,6 +119,7 @@
             Name = "Login";
             Text = "Personal Finance App";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -122,5 +132,6 @@
         private TextBox UserNameBox;
         private TextBox PasswordBox;
         private Button button1;
+        private PictureBox pictureBox1;
     }
 }

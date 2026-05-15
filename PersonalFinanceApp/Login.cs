@@ -10,26 +10,23 @@ namespace PersonalFinanceApp
         public Login()
         {
             InitializeComponent();
+
+            string path = @"C:\Users\alpic\Pictures\obama.bmp";
+
+            if (File.Exists(path))
+                pictureBox1.Image = Image.FromFile(path);
+            else
+                MessageBox.Show("Image not found");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void UserNameBox_TextChanged(object sender, EventArgs e)
         {
-            userNameInput = UserNameBox.Text; ;
+            userNameInput = UserNameBox.Text;
         }
 
         private void PasswordBox_TextChanged(object sender, EventArgs e)
