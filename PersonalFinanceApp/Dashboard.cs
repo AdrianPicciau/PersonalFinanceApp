@@ -1,4 +1,5 @@
-﻿using ScottPlot;
+﻿using System.Collections;
+using ScottPlot;
 using ScottPlot.Plottables;
 using ScottPlot.TickGenerators;
 

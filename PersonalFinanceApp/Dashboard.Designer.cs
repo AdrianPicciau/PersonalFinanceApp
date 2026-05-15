@@ -116,7 +116,7 @@
             // 
             // formsPlot1
             // 
-            formsPlot1.Location = new Point(451, 181);
+            formsPlot1.Location = new Point(499, 181);
             formsPlot1.Name = "formsPlot1";
             formsPlot1.Size = new Size(423, 327);
             formsPlot1.TabIndex = 6;
@@ -127,7 +127,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(919, 550);
+            ClientSize = new Size(972, 548);
             Controls.Add(formsPlot1);
             Controls.Add(remainingMoneyBox);
             Controls.Add(label3);
