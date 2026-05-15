@@ -11,7 +11,11 @@ namespace PersonalFinanceApp
         {
             InitializeComponent();
 
-            string path = @"C:\Users\alpic\Pictures\obama.bmp";
+            string path = Path.Combine(
+                Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName,
+                "Utilities",
+                "obama.bmp"
+            );
 
             if (File.Exists(path))
                 pictureBox1.Image = Image.FromFile(path);
