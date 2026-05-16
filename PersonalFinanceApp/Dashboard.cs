@@ -14,6 +14,14 @@ namespace PersonalFinanceApp
         public Dashboard()
         {
             InitializeComponent();
+
+            string path = Path.Combine(
+                Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName,
+                "Utilities",
+                "profits.ico"
+            );
+
+            Icon = new Icon(path);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

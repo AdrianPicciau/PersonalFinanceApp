@@ -14,6 +14,14 @@ namespace PersonalFinanceApp
             string path = Path.Combine(
                 Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName,
                 "Utilities",
+                "profits.ico"
+            );
+
+            Icon = new Icon(path);
+
+            path = Path.Combine(
+                Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName,
+                "Utilities",
                 "obama.bmp"
             );
 
