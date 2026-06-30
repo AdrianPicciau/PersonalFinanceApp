@@ -37,14 +37,19 @@
             label3 = new Label();
             remainingMoneyBox = new TextBox();
             formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            splitContainer1 = new SplitContainer();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(25, 38);
+            label1.Location = new Point(27, 24);
             label1.Name = "label1";
             label1.Size = new Size(252, 38);
             label1.TabIndex = 0;
@@ -53,7 +58,7 @@
             // incomeBox
             // 
             incomeBox.AcceptsTab = true;
-            incomeBox.Location = new Point(295, 49);
+            incomeBox.Location = new Point(297, 35);
             incomeBox.Name = "incomeBox";
             incomeBox.Size = new Size(150, 27);
             incomeBox.TabIndex = 1;
@@ -63,7 +68,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(25, 103);
+            label2.Location = new Point(27, 89);
             label2.Name = "label2";
             label2.Size = new Size(275, 38);
             label2.TabIndex = 2;
@@ -75,7 +80,7 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ExpensesName, Expenses });
-            dataGridView1.Location = new Point(25, 167);
+            dataGridView1.Location = new Point(27, 153);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(420, 341);
@@ -100,7 +105,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F);
-            label3.Location = new Point(491, 49);
+            label3.Location = new Point(43, 24);
             label3.Name = "label3";
             label3.Size = new Size(333, 32);
             label3.TabIndex = 4;
@@ -108,7 +113,7 @@
             // 
             // remainingMoneyBox
             // 
-            remainingMoneyBox.Location = new Point(499, 103);
+            remainingMoneyBox.Location = new Point(51, 78);
             remainingMoneyBox.Name = "remainingMoneyBox";
             remainingMoneyBox.ReadOnly = true;
             remainingMoneyBox.Size = new Size(201, 27);
@@ -116,32 +121,53 @@
             // 
             // formsPlot1
             // 
-            formsPlot1.Location = new Point(499, 181);
+            formsPlot1.Location = new Point(51, 156);
             formsPlot1.Name = "formsPlot1";
             formsPlot1.Size = new Size(423, 327);
             formsPlot1.TabIndex = 6;
             formsPlot1.Load += formsPlot1_Load;
+            // 
+            // splitContainer1
+            // 
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(label1);
+            splitContainer1.Panel1.Controls.Add(incomeBox);
+            splitContainer1.Panel1.Controls.Add(label2);
+            splitContainer1.Panel1.Controls.Add(dataGridView1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(label3);
+            splitContainer1.Panel2.Controls.Add(formsPlot1);
+            splitContainer1.Panel2.Controls.Add(remainingMoneyBox);
+            splitContainer1.Size = new Size(1003, 565);
+            splitContainer1.SplitterDistance = 466;
+            splitContainer1.TabIndex = 7;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(972, 548);
-            Controls.Add(formsPlot1);
-            Controls.Add(remainingMoneyBox);
-            Controls.Add(label3);
-            Controls.Add(dataGridView1);
-            Controls.Add(label2);
-            Controls.Add(incomeBox);
-            Controls.Add(label1);
+            ClientSize = new Size(1003, 565);
+            Controls.Add(splitContainer1);
             ForeColor = SystemColors.WindowFrame;
             Name = "Dashboard";
             Text = "Personal Finance App";
             Load += Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
+            splitContainer1.Panel2.ResumeLayout(false);
+            splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -155,5 +181,6 @@
         private Label label3;
         private TextBox remainingMoneyBox;
         private ScottPlot.WinForms.FormsPlot formsPlot1;
+        private SplitContainer splitContainer1;
     }
 }
